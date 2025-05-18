@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "jpmc-assignment"
 version = "0.1.0"
-description = ""
+description = "JP Morgan interview assignment"
 authors = ["Plamen Stilyianov <plamen.stilyianov@outlook.com>"]
 readme = "README.md"
 packages = [{include = "trading"}]
