@@ -224,7 +224,9 @@ class TestGlobalBeverageCorporationExchange:
     def test_all_stock_index_raise_error(self):
         """ Test ValueError for no trades"""
 
-        with pytest.raises(ValueError):
+        with pytest.raises(ValueError) as exif:
             gbc_exchange = GlobalBeverageCorporationExchange()
             gbc_exchange._trades = []
             gbc_exchange.all_stock_index()
+
+        assert str(exif.value) == ('No trades booked for this market')
